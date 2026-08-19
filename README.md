@@ -222,25 +222,37 @@ DIVIDE([Total Sales],[Total Orders],0)
 ---
 
 ## 📸 Dashboard Screenshots
+### 🌐 Executive Overview
 
-### 🌍 Executive Overview
+![Executive Overview](images/01-executive-overview.png)
 
-![Executive Overview](screenshots/01-executive-overviewuct Performance
+---
 
-![reenshots/product-analysis.png
+### 📦 Product Analysis
+
+![Product Analysis](images/product-analysis.png)
+
 ---
 
 ### 🗺️ Geographic Performance
 
-![Geographic Performance](screensance.png
+![Geographic Performance](images/sales-analysis.png)
+
+---
 
 ### 👥 Customer Insights
 
-screenshots/04-customer-insights.png
+![Customer Insights](images/customer-analysis.png)
+
+---
 
 ### 🚚 Shipping & Operations
 
-![Shipping & Operations](screenshots/05-shipping🎯 Skills Demonstrated
+![Shipping & Operations]()
+
+
+
+🎯 Skills Demonstrated
 
 - Power BI
 - Power Query
