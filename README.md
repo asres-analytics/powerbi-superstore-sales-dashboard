@@ -1,88 +1,261 @@
-# Power BI Superstore Sales Dashboard
+# 🌍 Global Superstore Sales Analytics Dashboard
 
-Interactive Sales Analytics Dashboard built with Microsoft Power BI using the Superstore Sales Dataset.
+Interactive Sales, Profitability, Customer & Operations Analytics built with Microsoft Power BI.
 
-## Project Overview
+---
 
-This project analyzes sales performance, profitability, customer behavior, and product trends using the Superstore Sales Dataset.
+## 📌 Project Overview
 
-The dashboard is designed to help business stakeholders:
+This project delivers an end-to-end Business Intelligence solution using Microsoft Power BI and the Global Superstore dataset.
 
-- Monitor sales performance
-- Track profitability
-- Identify top-performing products
-- Analyze customer segments
-- Compare regional performance
-- Discover business growth opportunities
+The solution includes:
 
-## Dataset
+- Data Cleaning with Power Query
+- Star Schema Data Modeling
+- Fact & Dimension Tables
+- DAX Measures & KPIs
+- Interactive Dashboard Pages
+- Executive-Level Business Insights
 
-Source: Kaggle
+The dashboard enables stakeholders to:
 
-Dataset: [Superstore Sales Dataset](https://www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset)
+- Monitor Revenue & Profitability
+- Analyze Product Performance
+- Evaluate Geographic Performance
+- Understand Customer Behavior
+- Optimize Shipping & Operations
+- Support Data-Driven Decision Making
 
-## Tools Used
+---
+
+## 📂 Dataset
+
+**Source:** Kaggle
+
+**Dataset:** Global Superstore Sales Dataset
+
+https://www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset
+
+---
+
+## 🛠 Tools Used
 
 - Microsoft Power BI
 - Power Query
 - DAX
 - Data Modeling
 - Data Visualization
+- Business Intelligence
 
-## Dashboard KPIs
+---
 
-### Sales Metrics
+## 📊 Data Model
 
-- Total Sales
+The dashboard follows a **Star Schema** design.
+
+### Fact Table
+
+- FactSales
+
+### Dimension Tables
+
+- DimDate
+- DimCustomer
+- DimProduct
+- DimGeography
+- DimShipping
+
+### Data Modeling Features
+
+- One-to-Many Relationships
+- Surrogate Keys
+- Fact & Dimension Architecture
+- Date Dimension
+- Slicer Synchronization
+
+---
+
+## 📈 Dashboard KPIs
+
+### Revenue Metrics
+
+- Total Revenue
 - Total Orders
 - Average Order Value
-- Sales Growth %
+- Revenue Growth Trend
 
 ### Profitability Metrics
 
 - Total Profit
 - Profit Margin %
 - Profit by Category
-- Profit by Region
+- Profit by Market
 
 ### Customer Metrics
 
-- Customer Segments
-- Top Customers
-- Customer Contribution
-
-## Dashboard Pages
-
-### 1. Executive Overview
-
-Business summary and KPI cards:
-
-- Total Sales
-- Total Profit
-- Total Orders
-- Profit Margin
-
-### 2. Sales Analysis
-
-- Monthly Sales Trend
-- Sales by Region
-- Sales by Category
-- Sales Growth Analysis
-
-### 3. Product Analysis
-
-- Top 10 Products
-- Bottom 10 Products
-- Sales by Category
-- Sales by Sub-Category
-
-### 4. Customer Analysis
-
 - Customer Segmentation
 - Top Customers
-- Regional Customer Distribution
+- Customer Revenue Contribution
 
-## Project Structure
+### Operational Metrics
+
+- Shipping Cost Analysis
+- Sales by Ship Mode
+- Profit by Ship Mode
+- Order Priority Analysis
+
+---
+
+# 📄 Dashboard Pages
+
+## 🌍 Executive Overview
+
+Provides an executive summary of business performance.
+
+### Highlights
+
+- Revenue KPI
+- Profit KPI
+- Orders KPI
+- Profit Margin
+- Revenue Growth Trend
+- Market Performance
+- Customer Sales Mix
+- Executive Summary
+
+---
+
+## 📦 Product Performance
+
+Analyzes category, sub-category, and product performance.
+
+### Highlights
+
+- Revenue by Sub-Category
+- Profit by Sub-Category
+- Top 10 Products by Revenue
+- Top 10 Products by Profit
+
+---
+
+## 🗺️ Geographic Performance
+
+Analyzes revenue and profitability across markets, regions, and countries.
+
+### Highlights
+
+- Revenue by Market
+- Profit by Market
+- Revenue by Region
+- Profit by Region
+- Top 10 Countries by Revenue
+- Top 10 Countries by Profit
+
+---
+
+## 👥 Customer Insights
+
+Provides customer-focused analytics and segmentation insights.
+
+### Highlights
+
+- Revenue by Segment
+- Profit by Segment
+- Customer Sales Mix
+- Top 10 Customers by Revenue
+- Top 10 Customers by Profit
+
+---
+
+## 🚚 Shipping & Operations
+
+Evaluates shipping efficiency and operational performance.
+
+### Highlights
+
+- Revenue by Ship Mode
+- Profit by Ship Mode
+- Shipping Cost Analysis
+- Revenue by Order Priority
+- Profit by Order Priority
+
+---
+
+## 🧹 Data Preparation
+
+Power Query was used for:
+
+- Data Quality Validation
+- Duplicate Removal
+- Data Type Corrections
+- Dimension Table Creation
+- Fact Table Construction
+- Data Transformation
+- Data Cleaning
+
+---
+
+## 🧠 DAX Measures
+
+Examples used in the dashboard:
+
+```DAX
+Total Sales =
+SUM(FactSales[sales])
+
+Total Profit =
+SUM(FactSales[profit])
+
+Total Orders =
+DISTINCTCOUNT(FactSales[order_id])
+
+Total Quantity =
+SUM(FactSales[quantity])
+
+Profit Margin % =
+DIVIDE([Total Profit],[Total Sales],0)
+
+Average Order Value =
+DIVIDE([Total Sales],[Total Orders],0)
+```
+
+---
+
+## 📸 Dashboard Screenshots
+
+### 🌍 Executive Overview
+
+![Executive Overview](screenshots/01-executive-overviewuct Performance
+
+![reenshots/product-analysis.png
+---
+
+### 🗺️ Geographic Performance
+
+![Geographic Performance](screensance.png
+
+### 👥 Customer Insights
+
+screenshots/04-customer-insights.png
+
+### 🚚 Shipping & Operations
+
+![Shipping & Operations](screenshots/05-shipping🎯 Skills Demonstrated
+
+- Power BI
+- Power Query
+- DAX
+- Star Schema Design
+- Data Modeling
+- Data Visualization
+- Dashboard Design
+- Business Intelligence
+- Analytics Storytelling
+- KPI Development
+
+---
+
+## 📁 Project Structure
 
 ```text
 powerbi-superstore-sales-dashboard/
@@ -91,92 +264,70 @@ powerbi-superstore-sales-dashboard/
 │   └── Superstore_Sales_Dashboard.pbix
 │
 ├── data/
-│   └── DATASET.md
-│
-├── docs/
-│   └── dashboard-requirements.md
+│   ├── DATASET.md
+│   └── SuperStoreOrders.csv
 │
 ├── screenshots/
-│   ├── customer-analysis.png
-│   ├── executive-overview.png
-│   ├── product-analysis.png
-│   └── sales-analysis.png
+│   ├── 01-executive-overview.png
+│   ├── 02-product-performance.png
+│   ├── 03-geographic-performance.png
+│   ├── 04-customer-insights.png
+│   └── 05-shipping-operations.png
 │
-├── .gitignore
 ├── LICENSE
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
-## Data Preparation
+---
 
-Data cleaning and transformation performed using Power Query:
-
-- Data type corrections
-- Null value validation
-- Data quality checks
-- Date formatting
-- Data modeling
-
-## DAX Measures
-
-Examples:
-
-```DAX
-Total Sales =
-SUM(Orders[Sales])
-
-Total Profit =
-SUM(Orders[Profit])
-
-Total Orders =
-DISTINCTCOUNT(Orders[Order ID])
-
-Profit Margin =
-DIVIDE([Total Profit],[Total Sales],0)
-```
-
-## Screenshots
-
-### Executive Overview
-
-Coming Soon
-
-### Sales Analysis
-
-Coming Soon
-
-### Product Analysis
-
-Coming Soon
-
-### Customer Analysis
-
-Coming Soon
-
-## Future Improvements
+## 🚀 Future Enhancements
 
 - Sales Forecasting
-- Customer Lifetime Value Analysis
+- Customer Lifetime Value (CLV)
 - RFM Analysis
-- Advanced Profitability Analysis
+- Geographic Mapping Visuals
 - AI-Powered Insights
+- Advanced Profitability Analytics
 
-## Author
+---
 
-Asres Gamu Yelia
+## 👨‍💻 Author
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE] file for details.
-
-### Dataset License
-
-This project uses the Superstore Sales Dataset available on Kaggle.
-
-Dataset Source:
-https://www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset
-
-The dataset remains the property of its original author and is subject to the licensing terms and conditions specified on Kaggle.
+**Asres Gamu Yelia**
 
 GitHub:
+
 https://github.com/asres-analytics
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
+
+---
+
+## 📚 Dataset Attribution
+
+This project uses the Global Superstore Sales Dataset available on Kaggle:
+
+https://www.kaggle.com/datasets/aditisaxena20/superstore-sales-dataset
+
+The dataset remains the property of its original author and is subject to the licensing terms provided on Kaggle.
+
+---
+
+## ⭐ Key Highlights
+
+- End-to-End Power BI Dashboard Development
+- Power Query Data Cleaning & Transformation
+- Star Schema Data Modeling
+- Fact & Dimension Table Design
+- Date Dimension Creation
+- DAX KPIs & Business Metrics
+- Interactive Multi-Page Dashboard
+- Slicer Synchronization Across Pages
+- Executive-Level Business Storytelling
